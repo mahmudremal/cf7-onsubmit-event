@@ -3,10 +3,8 @@
  * Option Page classes.
  * https://github.com/jeremyHixon/RationalOptionPages
  */
-namespace FUTUREWORDPRESS_PROJECT\Inc;
-
-use FUTUREWORDPRESS_PROJECT\Inc\Traits\Singleton;
-
+namespace CF7ONSUBMIT_THEME\Inc;
+use CF7ONSUBMIT_THEME\Inc\Traits\Singleton;
 class Option {
 
   use Singleton;
@@ -18,15 +16,26 @@ class Option {
 	private $options;
 	private $settings;
 
-	public function __construct( $plugin_name = 'buddypress-schedule-posts', $plugin_slug = 'buddypress-schedule-posts', $file = false ){
+	public function __construct() {
+		//  $plugin_name = 'CF7 onSubmit Event', $plugin_slug = 'cf7-onsubmit-event', $file = false 
+		$plugin_name = 'CF7 onSubmit Event';$plugin_slug = 'cf7-onsubmit-event';$file = CF7ONSUBMIT_PROJECT__FILE__;
     if( ! $file ) {$file = __FILE__;}
 		$this->file = $file;
 		$this->plugin_slug = $plugin_slug;
 		$this->plugin_name = $plugin_name;
-		$this->textdomain = 'fwp-bsp'; // str_replace('_', '-', $plugin_slug);
+		$this->textdomain = 'cf7-onsubmit-event'; // str_replace('_', '-', $plugin_slug);
 
+		// load class.
+		$this->setup_hooks();
+	}
+
+	/**
+	 * Initialise Hooks
+	 * @return void
+	 */
+	protected function setup_hooks() {
 		// Initialise settings
-		add_action( 'admin_init', array( $this, 'init' ) );
+		add_action( 'admin_init', array( $this, 'admin_init' ) );
 
 		// Add settings page to menu
 		add_action( 'admin_menu' , array( $this, 'add_menu_item' ) );
@@ -34,12 +43,11 @@ class Option {
 		// Add settings link to plugins page
 		add_filter( 'plugin_action_links_' . plugin_basename( $this->file ) , array( $this, 'add_settings_link' ) );
 	}
-
 	/**
 	 * Initialise settings
 	 * @return void
 	 */
-	public function init() {
+	public function admin_init() {
 		$this->settings = $this->settings_fields();
 		$this->options = $this->get_options();
 		$this->register_settings();
@@ -50,7 +58,7 @@ class Option {
 	 * @return void
 	 */
 	public function add_menu_item() {
-		$page = add_options_page( __( 'Activity Schedule Setup Page', FUTUREWORDPRESS_PROJECT_TEXT_DOMAIN ), __( 'Activity Schedule', FUTUREWORDPRESS_PROJECT_TEXT_DOMAIN ), 'manage_options' , $this->plugin_slug,  array( $this, 'settings_page' ) );
+		$page = add_options_page( __( 'ContactForm Submit Event Setup Page', 'cf7-onsubmit-event' ), __( 'Event Hooks', 'cf7-onsubmit-event' ), 'manage_options' , $this->plugin_slug,  array( $this, 'settings_page' ) );
 	}
 
 	/**
@@ -260,8 +268,8 @@ class Option {
 		// If you don't need tabbed navigation just strip out everything between the <!-- Tab navigation --> tags.
 	?>
 	  <div class="wrap" id="<?php echo $this->plugin_slug; ?>">
-	  	<h2><?php _e('Activity Schedule customization page.', $this->textdomain); ?></h2>
-	  	<p><?php _e('Your setting panel from where you can control Activity Schedule and customizations.', $this->textdomain); ?></p>
+	  	<h2><?php _e('Action Hooks customization page.', $this->textdomain); ?></h2>
+	  	<p><?php _e('Your setting panel from where you can control Action Hooks and customizations.', $this->textdomain); ?></p>
 
 		<!-- Tab navigation starts -->
 		<h2 class="nav-tab-wrapper settings-tabs hide-if-no-js">

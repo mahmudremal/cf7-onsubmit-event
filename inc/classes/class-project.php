@@ -4,9 +4,7 @@
  *
  * @package FWPCF7OnSubmitEvent
  */
-
 namespace CF7ONSUBMIT_THEME\Inc;
-
 use CF7ONSUBMIT_THEME\Inc\Traits\Singleton;
 
 class Project {
@@ -23,8 +21,9 @@ class Project {
 		// Bulks::get_instance();
 
 		// Blocks::get_instance();
-		// Menus::get_instance();
+		Menus::get_instance();
 		// Meta_Boxes::get_instance();
+		Option::get_instance();
 		Update::get_instance();
 		// Rewrite::get_instance();
 		// Shortcode::get_instance();
@@ -39,7 +38,7 @@ class Project {
 	}
 	public function body_class( $classes ) {
 		$classes = (array) $classes;
-		$classes[] = 'FWPWOOCHECKOUT';
+		$classes[] = 'fwp';
 		return $classes;
 	}
 }

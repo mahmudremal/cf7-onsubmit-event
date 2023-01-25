@@ -59,7 +59,7 @@ class Widgets_CustomCategory extends \Elementor\Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return __( 'Custom Category Slider', 'woocommerce-checkout-video-snippet' );
+		return __( 'Custom Category Slider', 'cf7-onsubmit-event' );
 	}
 	/**
 	 * Retrieve the widget icon.
@@ -113,13 +113,13 @@ class Widgets_CustomCategory extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'section_content',
 			array(
-				'label' => __( 'Content', 'woocommerce-checkout-video-snippet' ),
+				'label' => __( 'Content', 'cf7-onsubmit-event' ),
 			)
 		);
 		$this->add_control(
 			'show_view_all',
 			[
-				'label' => esc_html__('Display "View All" button', 'woocommerce-checkout-video-snippet'),
+				'label' => esc_html__('Display "View All" button', 'cf7-onsubmit-event'),
 				'type' => Controls_Manager::SWITCHER,
 				'return_value' => '1',
 				'default' => '1',
@@ -128,11 +128,11 @@ class Widgets_CustomCategory extends \Elementor\Widget_Base {
 		$this->add_control(
 			'view_all_style',
 			[
-				'label' => esc_html__('Style', 'woocommerce-checkout-video-snippet'),
+				'label' => esc_html__('Style', 'cf7-onsubmit-event'),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'left' => esc_html__('Left', 'woocommerce-checkout-video-snippet'),
-					'right' => esc_html__('Right', 'woocommerce-checkout-video-snippet'),
+					'left' => esc_html__('Left', 'cf7-onsubmit-event'),
+					'right' => esc_html__('Right', 'cf7-onsubmit-event'),
 				],
 				'default' => 'left',
 				'condition' => [
@@ -143,9 +143,9 @@ class Widgets_CustomCategory extends \Elementor\Widget_Base {
 		$this->add_control(
 			'view_all_title',
 			[
-				'label'   => __( 'Heading Text', 'woocommerce-checkout-video-snippet' ),
+				'label'   => __( 'Heading Text', 'cf7-onsubmit-event' ),
 				'type'    => Controls_Manager::TEXT,
-				'default' => __( 'Heading Text', 'woocommerce-checkout-video-snippet' ),
+				'default' => __( 'Heading Text', 'cf7-onsubmit-event' ),
 				'condition' => [
 					'show_view_all' => '1',
 				]
@@ -154,7 +154,7 @@ class Widgets_CustomCategory extends \Elementor\Widget_Base {
 		$this->add_control(
 			'show_viewall_btn',
 			[
-				'label' => esc_html__('Show button', 'woocommerce-checkout-video-snippet'),
+				'label' => esc_html__('Show button', 'cf7-onsubmit-event'),
 				'type' => Controls_Manager::SWITCHER,
 				'return_value' => '1',
 				'default' => '1',
@@ -163,7 +163,7 @@ class Widgets_CustomCategory extends \Elementor\Widget_Base {
 		$this->add_control(
 			'view_all_text',
 			[
-				'label' => esc_html__('View All Text', 'woocommerce-checkout-video-snippet'),
+				'label' => esc_html__('View All Text', 'cf7-onsubmit-event'),
 				'type' => Controls_Manager::WYSIWYG, // Controls_Manager::TEXTAREA,
 				'default' => "Didn't find the right category?",
 				'condition' => [
@@ -174,9 +174,9 @@ class Widgets_CustomCategory extends \Elementor\Widget_Base {
 		$this->add_control(
 			'view_all_btntxt',
 			[
-				'label'   => __( 'Button Text', 'woocommerce-checkout-video-snippet' ),
+				'label'   => __( 'Button Text', 'cf7-onsubmit-event' ),
 				'type'    => Controls_Manager::TEXT,
-				'default' => __( 'View all', 'woocommerce-checkout-video-snippet' ),
+				'default' => __( 'View all', 'cf7-onsubmit-event' ),
 				'condition' => [
 					'show_view_all' => '1',
 				]
@@ -185,7 +185,7 @@ class Widgets_CustomCategory extends \Elementor\Widget_Base {
 		$this->add_control(
 			'view_all_link',
 			[
-				'label'   => __( 'View all button link', 'woocommerce-checkout-video-snippet' ),
+				'label'   => __( 'View all button link', 'cf7-onsubmit-event' ),
 				'type'    => Controls_Manager::TEXT,
 				'default' => '',
 				'condition' => [
@@ -196,7 +196,7 @@ class Widgets_CustomCategory extends \Elementor\Widget_Base {
 		$this->add_control(
 				'view_all_image',
 				[
-						'label' => esc_html__('Image', 'woocommerce-checkout-video-snippet'),
+						'label' => esc_html__('Image', 'cf7-onsubmit-event'),
 						'type' => Controls_Manager::MEDIA,
 						'condition' => [
 								'show_view_all' => '1',
@@ -217,14 +217,14 @@ class Widgets_CustomCategory extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'section_slider',
 			array(
-				'label' => __( 'Slider', 'woocommerce-checkout-video-snippet' ),
+				'label' => __( 'Slider', 'cf7-onsubmit-event' ),
 			)
 		);
 		$repeater = new Repeater();
 		$repeater->add_control(
 			'image',
 			[
-				'label' => esc_html__('Image', 'woocommerce-checkout-video-snippet'),
+				'label' => esc_html__('Image', 'cf7-onsubmit-event'),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -234,30 +234,30 @@ class Widgets_CustomCategory extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'label',
 			[
-				'label' => esc_html__('Category Label', 'woocommerce-checkout-video-snippet'),
+				'label' => esc_html__('Category Label', 'cf7-onsubmit-event'),
 				'type' => Controls_Manager::TEXT,
-				'placeholder' => __( 'Title Here', 'woocommerce-checkout-video-snippet' ),
+				'placeholder' => __( 'Title Here', 'cf7-onsubmit-event' ),
 			]
 		);
 		$repeater->add_control(
 			'link',
 			[
-				'label' => esc_html__('Category URL', 'woocommerce-checkout-video-snippet'),
+				'label' => esc_html__('Category URL', 'cf7-onsubmit-event'),
 				'type' => Controls_Manager::TEXT,
-				'placeholder' => __( 'Full URL of this category.', 'woocommerce-checkout-video-snippet' ),
+				'placeholder' => __( 'Full URL of this category.', 'cf7-onsubmit-event' ),
 			]
 		);
 		$repeater->add_control(
 			'color',
 			[
-				'label' => esc_html__('Background Color', 'woocommerce-checkout-video-snippet'),
+				'label' => esc_html__('Background Color', 'cf7-onsubmit-event'),
 				'type' => Controls_Manager::COLOR,
 			]
 		);
 		$this->add_control(
 			'categories',
 			[
-				'label' => esc_html__('Category Items', 'woocommerce-checkout-video-snippet'),
+				'label' => esc_html__('Category Items', 'cf7-onsubmit-event'),
 				'type' => Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'prevent_empty' => false,

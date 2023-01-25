@@ -4,9 +4,7 @@
  *
  * @package FWPCF7OnSubmitEvent
  */
-
 namespace CF7ONSUBMIT_THEME\Inc;
-
 use CF7ONSUBMIT_THEME\Inc\Traits\Singleton;
 use \WP_Query;
 
@@ -28,7 +26,7 @@ class Notices {
 	}
 	private function notice() {
 		$args = [
-			// 'confirm'	=> __( 'Are you sure you want to disapear this message?', 'woocommerce-checkout-video-snippet' ),
+			// 'confirm'	=> __( 'Are you sure you want to disapear this message?', 'cf7-onsubmit-event' ),
 			// 'request'	=> []
 		];
 		?>
@@ -40,15 +38,15 @@ class Notices {
 				</div>
 			</div>
 			<div class="fwp-notice__content">
-				<h3><?php esc_html_e('Congratulations! Love using this Plugin?.', 'woocommerce-checkout-video-snippet'); ?></h3>
-				<p><?php esc_html_e('Become a super contributor by opting in to share non-sensitive plugin data and to receive periodic email updates from us.', 'woocommerce-checkout-video-snippet') ?> <a href="#!" target="_blank"><?php esc_html_e('Learn more.', 'woocommerce-checkout-video-snippet') ?></a>
+				<h3><?php esc_html_e('Congratulations! Love using this Plugin?.', 'cf7-onsubmit-event'); ?></h3>
+				<p><?php esc_html_e('Become a super contributor by opting in to share non-sensitive plugin data and to receive periodic email updates from us.', 'cf7-onsubmit-event') ?> <a href="#!" target="_blank"><?php esc_html_e('Learn more.', 'cf7-onsubmit-event') ?></a>
 			</p>
 			<div class="fwp-notice__actions">
 				<a href="#!" class="fwp-button">
-					<span><?php esc_html_e('Sure! I\'d love to help', 'woocommerce-checkout-video-snippet') ?></span>
+					<span><?php esc_html_e('Sure! I\'d love to help', 'cf7-onsubmit-event') ?></span>
 				</a>
 				<a href="#!" class="fwp-button fwp-button__outline fwp-notice__cancel">
-					<span><?php esc_html_e('No thanks', 'woocommerce-checkout-video-snippet') ?></span>
+					<span><?php esc_html_e('No thanks', 'cf7-onsubmit-event') ?></span>
 				</a>
 			</div>
 			</div>

@@ -34,7 +34,7 @@ class Elementor_WidgetCustomCategory extends \Elementor\Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return esc_html__( 'oEmbed', 'woocommerce-checkout-video-snippet' );
+		return esc_html__( 'oEmbed', 'cf7-onsubmit-event' );
 	}
 	/**
 	 * Get widget icon.

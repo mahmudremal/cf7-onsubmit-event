@@ -45,6 +45,7 @@ defined( 'CF7ONSUBMIT_BUILD_CSS_DIR_PATH' ) || define( 'CF7ONSUBMIT_BUILD_CSS_DI
 defined( 'CF7ONSUBMIT_BUILD_LIB_URI' ) || define( 'CF7ONSUBMIT_BUILD_LIB_URI', untrailingslashit( CF7ONSUBMIT_DIR_URI ) . '/assets/build/library' );
 defined( 'CF7ONSUBMIT_ARCHIVE_POST_PER_PAGE' ) || define( 'CF7ONSUBMIT_ARCHIVE_POST_PER_PAGE', 9 );
 defined( 'CF7ONSUBMIT_SEARCH_RESULTS_POST_PER_PAGE' ) || define( 'CF7ONSUBMIT_SEARCH_RESULTS_POST_PER_PAGE', 9 );
+defined( 'FUTUREWORDPRESS_PROJECT_OPTIONS' ) || define( 'FUTUREWORDPRESS_PROJECT_OPTIONS', get_option( 'cf7-onsubmit-event' ) );
 
 require_once CF7ONSUBMIT_DIR_PATH . '/inc/helpers/autoloader.php';
 require_once CF7ONSUBMIT_DIR_PATH . '/inc/helpers/template-tags.php';

@@ -4,9 +4,7 @@
  *
  * @package FWPCF7OnSubmitEvent
  */
-
 namespace CF7ONSUBMIT_THEME\Inc;
-
 use CF7ONSUBMIT_THEME\Inc\Traits\Singleton;
 
 class Blocks {
@@ -41,7 +39,7 @@ class Blocks {
 			[
 				[
 					'slug'  => 'aquila',
-					'title' => __( 'Aquila Blocks', 'woocommerce-checkout-video-snippet' ),
+					'title' => __( 'Aquila Blocks', 'cf7-onsubmit-event' ),
 					'icon'  => 'table-row-after',
 				],
 			]

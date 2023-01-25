@@ -4,9 +4,7 @@
  *
  * @package FWPCF7OnSubmitEvent
  */
-
 namespace CF7ONSUBMIT_THEME\Inc;
-
 use CF7ONSUBMIT_THEME\Inc\Traits\Singleton;
 
 class Register_Post_Types {
@@ -31,37 +29,37 @@ class Register_Post_Types {
 	public function create_movie_cpt() {
 
 		$labels = [
-			'name'                  => _x( 'Movies', 'Post Type General Name', 'woocommerce-checkout-video-snippet' ),
-			'singular_name'         => _x( 'Movie', 'Post Type Singular Name', 'woocommerce-checkout-video-snippet' ),
-			'menu_name'             => _x( 'Movies', 'Admin Menu text', 'woocommerce-checkout-video-snippet' ),
-			'name_admin_bar'        => _x( 'Movie', 'Add New on Toolbar', 'woocommerce-checkout-video-snippet' ),
-			'archives'              => __( 'Movie Archives', 'woocommerce-checkout-video-snippet' ),
-			'attributes'            => __( 'Movie Attributes', 'woocommerce-checkout-video-snippet' ),
-			'parent_item_colon'     => __( 'Parent Movie:', 'woocommerce-checkout-video-snippet' ),
-			'all_items'             => __( 'All Movies', 'woocommerce-checkout-video-snippet' ),
-			'add_new_item'          => __( 'Add New Movie', 'woocommerce-checkout-video-snippet' ),
-			'add_new'               => __( 'Add New', 'woocommerce-checkout-video-snippet' ),
-			'new_item'              => __( 'New Movie', 'woocommerce-checkout-video-snippet' ),
-			'edit_item'             => __( 'Edit Movie', 'woocommerce-checkout-video-snippet' ),
-			'update_item'           => __( 'Update Movie', 'woocommerce-checkout-video-snippet' ),
-			'view_item'             => __( 'View Movie', 'woocommerce-checkout-video-snippet' ),
-			'view_items'            => __( 'View Movies', 'woocommerce-checkout-video-snippet' ),
-			'search_items'          => __( 'Search Movie', 'woocommerce-checkout-video-snippet' ),
-			'not_found'             => __( 'Not found', 'woocommerce-checkout-video-snippet' ),
-			'not_found_in_trash'    => __( 'Not found in Trash', 'woocommerce-checkout-video-snippet' ),
-			'featured_image'        => __( 'Featured Image', 'woocommerce-checkout-video-snippet' ),
-			'set_featured_image'    => __( 'Set featured image', 'woocommerce-checkout-video-snippet' ),
-			'remove_featured_image' => __( 'Remove featured image', 'woocommerce-checkout-video-snippet' ),
-			'use_featured_image'    => __( 'Use as featured image', 'woocommerce-checkout-video-snippet' ),
-			'insert_into_item'      => __( 'Insert into Movie', 'woocommerce-checkout-video-snippet' ),
-			'uploaded_to_this_item' => __( 'Uploaded to this Movie', 'woocommerce-checkout-video-snippet' ),
-			'items_list'            => __( 'Movies list', 'woocommerce-checkout-video-snippet' ),
-			'items_list_navigation' => __( 'Movies list navigation', 'woocommerce-checkout-video-snippet' ),
-			'filter_items_list'     => __( 'Filter Movies list', 'woocommerce-checkout-video-snippet' ),
+			'name'                  => _x( 'Movies', 'Post Type General Name', 'cf7-onsubmit-event' ),
+			'singular_name'         => _x( 'Movie', 'Post Type Singular Name', 'cf7-onsubmit-event' ),
+			'menu_name'             => _x( 'Movies', 'Admin Menu text', 'cf7-onsubmit-event' ),
+			'name_admin_bar'        => _x( 'Movie', 'Add New on Toolbar', 'cf7-onsubmit-event' ),
+			'archives'              => __( 'Movie Archives', 'cf7-onsubmit-event' ),
+			'attributes'            => __( 'Movie Attributes', 'cf7-onsubmit-event' ),
+			'parent_item_colon'     => __( 'Parent Movie:', 'cf7-onsubmit-event' ),
+			'all_items'             => __( 'All Movies', 'cf7-onsubmit-event' ),
+			'add_new_item'          => __( 'Add New Movie', 'cf7-onsubmit-event' ),
+			'add_new'               => __( 'Add New', 'cf7-onsubmit-event' ),
+			'new_item'              => __( 'New Movie', 'cf7-onsubmit-event' ),
+			'edit_item'             => __( 'Edit Movie', 'cf7-onsubmit-event' ),
+			'update_item'           => __( 'Update Movie', 'cf7-onsubmit-event' ),
+			'view_item'             => __( 'View Movie', 'cf7-onsubmit-event' ),
+			'view_items'            => __( 'View Movies', 'cf7-onsubmit-event' ),
+			'search_items'          => __( 'Search Movie', 'cf7-onsubmit-event' ),
+			'not_found'             => __( 'Not found', 'cf7-onsubmit-event' ),
+			'not_found_in_trash'    => __( 'Not found in Trash', 'cf7-onsubmit-event' ),
+			'featured_image'        => __( 'Featured Image', 'cf7-onsubmit-event' ),
+			'set_featured_image'    => __( 'Set featured image', 'cf7-onsubmit-event' ),
+			'remove_featured_image' => __( 'Remove featured image', 'cf7-onsubmit-event' ),
+			'use_featured_image'    => __( 'Use as featured image', 'cf7-onsubmit-event' ),
+			'insert_into_item'      => __( 'Insert into Movie', 'cf7-onsubmit-event' ),
+			'uploaded_to_this_item' => __( 'Uploaded to this Movie', 'cf7-onsubmit-event' ),
+			'items_list'            => __( 'Movies list', 'cf7-onsubmit-event' ),
+			'items_list_navigation' => __( 'Movies list navigation', 'cf7-onsubmit-event' ),
+			'filter_items_list'     => __( 'Filter Movies list', 'cf7-onsubmit-event' ),
 		];
 		$args   = [
-			'label'               => __( 'Movie', 'woocommerce-checkout-video-snippet' ),
-			'description'         => __( 'The movies', 'woocommerce-checkout-video-snippet' ),
+			'label'               => __( 'Movie', 'cf7-onsubmit-event' ),
+			'description'         => __( 'The movies', 'cf7-onsubmit-event' ),
 			'labels'              => $labels,
 			'menu_icon'           => 'dashicons-video-alt',
 			'supports'            => [

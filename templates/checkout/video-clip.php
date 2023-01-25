@@ -28,14 +28,14 @@ if( isset( $meta[ 'full_path' ] ) && $meta[ 'full_path' ] !== false && ! empty( 
   //       $title = "$title $sep $site_description";
   //     }
   //     if ( $paged >= 2 || $page >= 2 ) {
-  //       $title = "$title $sep " . sprintf( __( 'Page %s', 'woocommerce-checkout-video-snippet' ), max( $paged, $page ) );
+  //       $title = "$title $sep " . sprintf( __( 'Page %s', 'cf7-onsubmit-event' ), max( $paged, $page ) );
   //     }
   //     return $title;
   //   }, 10, 2 );
   // }
   // get_header();
-  $errorHappens = __( 'Seems we\'d reached on an invalid or expired link. Please go back and assist valid url.', 'woocommerce-checkout-video-snippet' );
-  wp_die( $errorHappens, __( 'Invalid link', 'woocommerce-checkout-video-snippet' ) );
+  $errorHappens = __( 'Seems we\'d reached on an invalid or expired link. Please go back and assist valid url.', 'cf7-onsubmit-event' );
+  wp_die( $errorHappens, __( 'Invalid link', 'cf7-onsubmit-event' ) );
 }
 ?>
 

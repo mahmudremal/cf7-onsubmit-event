@@ -31,10 +31,10 @@ class Shortcode {
 	public function checkout_video( $args ) {
 		$args = wp_parse_args( $args, [] );$errorHappens = false;
 		$args[ 'post_id' ] = get_query_var( 'clip' );
-		if( ! $args[ 'post_id' ] || empty( $args[ 'post_id' ] ) ) {$errorHappens = __( 'Link that required video clip ID included.', 'woocommerce-checkout-video-snippet' );}
+		if( ! $args[ 'post_id' ] || empty( $args[ 'post_id' ] ) ) {$errorHappens = __( 'Link that required video clip ID included.', 'cf7-onsubmit-event' );}
 		$meta = get_post_meta( $args[ 'post_id' ], 'checkout_video_clip', true );
-		if( ! isset( $meta[ 'full_path' ] ) || $meta[ 'full_path' ] === false || ! file_exists( $meta[ 'full_path' ] ) || is_dir( $meta[ 'full_path' ] ) ) {$errorHappens = __( 'Video file not found. Maybe expired :( If so, message is file removed permanently from server.', 'woocommerce-checkout-video-snippet' );}
-		if( is_user_logged_in() && get_current_user_id() != get_post_field( 'post_author', $args[ 'post_id' ] ) || ! current_user_can( 'manage_options' ) ) {$errorHappens = __( 'You don\'t have authorization to access this video. Only people who placed order or uploaded video and admin can access this video.', 'woocommerce-checkout-video-snippet' );}
+		if( ! isset( $meta[ 'full_path' ] ) || $meta[ 'full_path' ] === false || ! file_exists( $meta[ 'full_path' ] ) || is_dir( $meta[ 'full_path' ] ) ) {$errorHappens = __( 'Video file not found. Maybe expired :( If so, message is file removed permanently from server.', 'cf7-onsubmit-event' );}
+		if( is_user_logged_in() && get_current_user_id() != get_post_field( 'post_author', $args[ 'post_id' ] ) || ! current_user_can( 'manage_options' ) ) {$errorHappens = __( 'You don\'t have authorization to access this video. Only people who placed order or uploaded video and admin can access this video.', 'cf7-onsubmit-event' );}
 		wp_enqueue_script( 'FWPWooCheckoutVideo' );wp_enqueue_script( 'FWPWooCheckoutVideo-checkout' );
 		ob_start();
 		if( $errorHappens === false ) :
@@ -45,9 +45,9 @@ class Shortcode {
 					<source src="<?php echo esc_url( $meta['full_url'] ); ?>" type="<?php echo esc_attr( $meta['type'] ); ?>"></source>
 					<p class="vjs-no-js">
 						<?php esc_html_e( 'To view this video please enable JavaScript, and consider upgrading to a
-						web browser that', 'woocommerce-checkout-video-snippet' ); ?>
+						web browser that', 'cf7-onsubmit-event' ); ?>
 						<a href="https://videojs.com/html5-video-support/" target="_blank">
-							<?php esc_html_e( 'supports HTML5 video', 'woocommerce-checkout-video-snippet' ); ?>
+							<?php esc_html_e( 'supports HTML5 video', 'cf7-onsubmit-event' ); ?>
 						</a>
 					</p>
 				</video>

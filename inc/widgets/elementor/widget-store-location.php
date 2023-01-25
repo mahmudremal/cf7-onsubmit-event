@@ -59,7 +59,7 @@ class Widgets_CustomCategory extends \Elementor\Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return __( 'Store Location', 'woocommerce-checkout-video-snippet' );
+		return __( 'Store Location', 'cf7-onsubmit-event' );
 	}
 	/**
 	 * Retrieve the widget icon.
@@ -113,13 +113,13 @@ class Widgets_CustomCategory extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'section_content',
 			array(
-				'label' => __( 'Content', 'woocommerce-checkout-video-snippet' ),
+				'label' => __( 'Content', 'cf7-onsubmit-event' ),
 			)
 		);
 		$this->add_control(
 			'show_the_map',
 			[
-				'label' => esc_html__('Enable Map', 'woocommerce-checkout-video-snippet'),
+				'label' => esc_html__('Enable Map', 'cf7-onsubmit-event'),
 				'type' => Controls_Manager::SWITCHER,
 				'return_value' => '1',
 				'default' => '1',

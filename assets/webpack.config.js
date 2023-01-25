@@ -20,8 +20,8 @@ const BUILD_DIR = path.resolve( __dirname, 'build' );
 
 const entry = {
 	frontend: JS_DIR + '/frontend.js',
-	backend: JS_DIR + '/backend.js',
-	checkout: JS_DIR + '/checkout.js',
+	// backend: JS_DIR + '/backend.js',
+	// checkout: JS_DIR + '/checkout.js',
 	// widgets: JS_DIR + '/widgets.js',
 	// single: JS_DIR + '/single.js',
 	// editor: JS_DIR + '/editor.js',

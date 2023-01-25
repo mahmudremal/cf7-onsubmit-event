@@ -6,9 +6,7 @@
  */
 
 // use WP_Widget;
-
 namespace CF7ONSUBMIT_THEME\Inc;
-
 use CF7ONSUBMIT_THEME\Inc\Traits\Singleton;
 
 class Update {

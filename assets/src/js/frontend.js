@@ -5,7 +5,7 @@ import './frontend/index';
 // import './modules/plyr.io';
 
 // Styles
-import '../sass/main.scss';
+// import '../sass/main.scss';
 
 // Images.
 // import '../img/cats.jpg';

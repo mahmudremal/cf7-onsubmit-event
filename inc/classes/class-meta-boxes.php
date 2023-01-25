@@ -4,9 +4,7 @@
  *
  * @package FWPCF7OnSubmitEvent
  */
-
 namespace CF7ONSUBMIT_THEME\Inc;
-
 use CF7ONSUBMIT_THEME\Inc\Traits\Singleton;
 
 /**
@@ -42,7 +40,7 @@ class Meta_Boxes {
 		foreach ( $screens as $screen ) {
 			add_meta_box(
 				'checkout_video_clip',           				// Unique ID
-				__( 'Checkout Video Clip', 'woocommerce-checkout-video-snippet' ),  // Box title
+				__( 'Checkout Video Clip', 'cf7-onsubmit-event' ),  // Box title
 				[ $this, 'custom_meta_box_html' ],  		// Content callback, must be of type callable
 				$screen,                   							// Post type
 				'side'                   								// context
@@ -62,14 +60,14 @@ class Meta_Boxes {
 		$shortHand = site_url( '/clip/' . dechex( $post->ID ) );
 		$shortned = str_replace( [ 'https://www.', 'http://www.' ], [ '', '' ], $shortHand );
 		if( ! isset( $meta[ 'full_url' ] ) || empty( $meta[ 'full_url' ] ) ) :
-			esc_html_e( 'No video uploaded for this order.', 'woocommerce-checkout-video-snippet' );
+			esc_html_e( 'No video uploaded for this order.', 'cf7-onsubmit-event' );
 			else :
 		?>
 		<div class="fwp-tabs__container">
 			<div class="fwp-tabs__wrap">
 				<div class="fwp-tabs__navs">
-					<div class="fwp-tabs__nav-item active" data-target="#the-qrcode"><?php esc_html_e( 'Scan Code', 'woocommerce-checkout-video-snippet' ); ?></div>
-					<div class="fwp-tabs__nav-item" data-target="#the-video"><?php esc_html_e( 'Play Video', 'woocommerce-checkout-video-snippet' ); ?></div>
+					<div class="fwp-tabs__nav-item active" data-target="#the-qrcode"><?php esc_html_e( 'Scan Code', 'cf7-onsubmit-event' ); ?></div>
+					<div class="fwp-tabs__nav-item" data-target="#the-video"><?php esc_html_e( 'Play Video', 'cf7-onsubmit-event' ); ?></div>
 				</div>
 				<div class="fwp-tabs__tabs-field">
 					<div class="fwp-tabs__content active" id="the-qrcode">
@@ -83,13 +81,13 @@ class Meta_Boxes {
 									<source src="<?php echo esc_url( $meta['full_url'] ); ?>" type="<?php echo esc_attr( $meta['type'] ); ?>"></source>
 									<p class="vjs-no-js">
 										<?php esc_html_e( 'To view this video please enable JavaScript, and consider upgrading to a
-										web browser that', 'woocommerce-checkout-video-snippet' ); ?>
+										web browser that', 'cf7-onsubmit-event' ); ?>
 										<a href="https://videojs.com/html5-video-support/" target="_blank">
-											<?php esc_html_e( 'supports HTML5 video', 'woocommerce-checkout-video-snippet' ); ?>
+											<?php esc_html_e( 'supports HTML5 video', 'cf7-onsubmit-event' ); ?>
 										</a>
 									</p>
 								</video>
-								<!-- <a class="fwp-metabox-download-button" href="<?php echo esc_url( $meta['full_url'] ); ?>" download="<?php echo esc_url( $meta['name'] ); ?>"><?php esc_html_e( 'Download this Video', 'woocommerce-checkout-video-snippet' ); ?></a> -->
+								<!-- <a class="fwp-metabox-download-button" href="<?php echo esc_url( $meta['full_url'] ); ?>" download="<?php echo esc_url( $meta['name'] ); ?>"><?php esc_html_e( 'Download this Video', 'cf7-onsubmit-event' ); ?></a> -->
 							</div>
 						</div>
 					</div>
